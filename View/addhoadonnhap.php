@@ -56,8 +56,8 @@
         			<th>ID</th>
         			<th>Tên</th>
         			<th style="width: 100px">SL</th>
-        			<th style="width: 100px">Giá</th>
-              <th style="width: 100px">Tiền</th>
+        			<th style="width: 140px">Giá</th>
+              <th style="width: 140px">Tiền</th>
               <th></th>
         		</tr>
         	</thead>
@@ -76,8 +76,8 @@
                     </td>
                     <td><?php echo $val['tensp']; ?></td>
                     <td><input type="text" class="sl" name="sl" value="<?php echo $val['sl']; ?>"></td>
-                    <td><input type="text" name="gia" class="gia" value="<?php echo $val['gia'].'$';  ?>"></td>
-                    <td><input type="text" class="tien" value="<?php echo $val['gia'] * $val['sl'] .'$' ?>"></td>
+                    <td><input type="text" name="gia" class="gia" value="<?php echo $val['gia'].'000VNĐ';  ?>"></td>
+                    <td><input type="text" class="tien" value="<?php echo $val['gia'] * $val['sl'] .'000VNĐ' ?>"></td>
                     <td>
                       <button type="submit" name="xoa" onclick="return confirm('Bạn Có Muốn Xóa <?php echo $val['tensp'];  ?> ?');"><i class="fas fa-trash-alt"></i></button>
                       <button type="submit" onclick="return confirm('Bạn Có Muốn Sửa ?');" name="sua"><i class="fas fa-edit"></i></button>
@@ -109,7 +109,7 @@
            foreach ($_SESSION['cartnhap'] as $key => $val) {
             $tam+=$val['sl']*$val['gia'];
           }
-          echo $tam.'$';
+          echo $tam.'000VNĐ';
            }?></p> <input type="text" hidden class="tongtien" name="tien" value="<?php $tam=0; if (isset($_SESSION['cartnhap'])) {
            foreach ($_SESSION['cartnhap'] as $key => $val) {
             $tam+=$val['sl']*$val['gia'];
@@ -126,7 +126,7 @@
     </div>
   <script>
     // function nhap() {
-    //     $("#LL").html($('.dl').val()-$('.tongtien').val()+'$'); 
+    //     $("#LL").html($('.dl').val()-$('.tongtien').val()+'000VNĐ'); 
     // }
   $(document).ready(function(){
     $("#myInput").on("keyup", function() {

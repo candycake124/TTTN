@@ -27,7 +27,7 @@
 						$dem=0;
 						foreach ($sanpham as $key) {
 							if ($key['soluong']>0) {
-								$dem+=$key['gianhap'];
+								$dem+=$key['gianhap']*$key['soluong'];
 							}
 						}
 						?><h2 style="color: #e67e22"><?php echo $dem; ?></h2><?php
@@ -46,7 +46,7 @@
 						$dem=0;
 						foreach ($sanpham as $key) {
 							if ($key['soluong']>0) {
-								$dem+=$key['giaban'];
+								$dem+=$key['giaban']*$key['soluong'];
 							}
 						}
 						?><h2 style="color: #e74c3c"><?php echo $dem; ?></h2><?php
@@ -119,16 +119,16 @@
 				<p><?php echo $dem; ?></p>
 			</td>
 			<td>
-				<span class="taikhoan"><?php echo $value['tensp']; ?></span>
+				<span class="taikhoan"><?php echo $value['tensp']; ?>sdbdfb</span>
 			</td>
 			<td>	
 				<span><?php echo $value['soluong']; ?></span>	
 			</td>
 			<td>
-				<span><?php echo $value['soluong']*$value['gianhap'].'$'; ?></span>
+				<span><?php echo $value['soluong']*$value['gianhap'].'VNĐ'; ?></span>
 			</td>
 			<td>
-				<span><?php echo $value['soluong']*$value['giaban'].'$'; ?></span>
+				<span><?php echo $value['soluong']*$value['giaban'].'VNĐ'; ?></span>
 			</td>
 		</tr>
 	<?php } 

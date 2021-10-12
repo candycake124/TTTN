@@ -66,7 +66,7 @@
 			<input type="date" value="<?php echo $value['ngaynhap']; ?>" name="">
 		</td>
 		<td>
-			<p><?php echo $value['tongtien'].'$'; ?></p>
+			<p><?php echo $value['tongtien'].'000VNĐ'; ?></p>
 		</td>
 	</form>
 	</tr>
@@ -127,9 +127,9 @@
 									      	}?><p></td>
 									      	<td><p><?php echo $va['soluong']; ?><p></td>
 									      	<td>
-									      		<p><?php echo $va['giatien'].'$'; ?></p>
+									      		<p><?php echo $va['giatien'].'000VNĐ'; ?></p>
 									      	</td>
-									      	<td><p><?php echo ($va['soluong']*$va['giatien']).'$'; ?></p></td>
+									      	<td><p><?php echo ($va['soluong']*$va['giatien']).'000VNĐ'; ?></p></td>
 											
 									    </tr>
 						    		<?php

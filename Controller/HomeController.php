@@ -374,7 +374,7 @@ session_start();
 //THÊM USER
 						if (isset($_POST['login'])) {
 							$tk=$_POST['taikhoan'];
-							$mk=$_POST['matkhau'];
+							$mk=md5($_POST['matkhau']);
 							$idnv=$_POST['id_nv'];
 							$lv=$_POST['level'];
 							if ($tk!='' && $mk!='') {
